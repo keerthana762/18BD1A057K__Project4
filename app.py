@@ -9,7 +9,9 @@ import requests_cache
 
 
 account_sid='AC18e3f3f760fc56621439d97b3d1c4b36'
-auth_token='f32d473f0c79f74073dcf9b8bec9949b'
+#auth_token='f32d473f0c79f74073dcf9b8bec9949b'
+auth_token='f46ec385f62613343e30b73d706449fa'
+
 
 
 
@@ -41,7 +43,7 @@ def user_registration_dtls():
     travel_pass=((cnt/pop)*100)
     if travel_pass<30 and request.method=='POST':
         status='CONFIRMED'
-        client.messages.create(to="whatsapp:+918317503982",
+        client.messages.create(to="whatsapp:+91**********",
                                from_="whatsapp:+14155238886",
                                body="Hi "+" "+full_name+" "+"Your Travel From "+" "+source_dt+" "+"To"+" "+destination_dt+" "+"Has"+
               " "+status+" On"+" "+date+" "+", Apply later")
@@ -50,7 +52,7 @@ def user_registration_dtls():
                                var8=date,var9=status)
     else:
         status = 'Not Confirmed'
-        client.messages.create(to="whatsapp:+918317503982",
+        client.messages.create(to="whatsapp:+91**********",
                                from_="whatsapp:+14155238886",
                                body="Hi " + " " + full_name + "  " + "Your travel from" + source_dt + " " + "To" + " " + destination_dt + " "
                                     + "Has" + " " + status + " On" + " " + date + " " + ", Apply later")
